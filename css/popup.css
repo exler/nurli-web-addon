@@ -1,0 +1,173 @@
+:root {
+    --contentBg: #FFF;
+    --border: #E5E5E5;
+    --color: #232323;
+    --colorLink: #999;
+    --main: #FF8906;
+    --errorColor: #FF0E06;
+    --saveButtonColor: #FFF;
+    --saveButtonBg: #111;
+    --deleteButtonColor: #FF0E06;
+    --deleteButtonBg: #111;
+}
+
+@media (prefers-color-scheme:dark) {
+    :root:root {
+        --contentBg: #292929;
+        --border: #191919;
+        --color: #FFF;
+        --buttonBg: #444;
+    }
+}
+
+* {
+    border-width: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--contentBg);
+}
+
+#popup-box {
+    display: grid;
+    width: 380px;
+    grid-template-columns: auto 1fr;
+    padding: 16px;
+    grid-gap: 4px;
+}
+
+#popup-box #logo {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 48px;
+    margin-right: 8px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+#popup-box #logo img {
+    width: 100%;
+}
+
+#popup-box #app-name {
+    color: var(--color);
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 1.5em;
+}
+
+#popup-box #menu-box {
+    grid-row: 2;
+    grid-column: 2;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+}
+
+#popup-box #menu-box>*:not(:first-child) {
+    margin-left: 8px;
+}
+
+#popup-box #menu-box p {
+    color: var(--colorLink);
+}
+
+#popup-box #menu-box a {
+    display: block;
+    color: var(--colorLink);
+    font-size: .9em;
+}
+
+#popup-box #menu-box a:hover,
+#popup-box #menu-box a:focus {
+    color: var(--main);
+    text-decoration: underline;
+}
+
+#popup-box #input-tags-box {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+#popup-box #input-tags-box input {
+    color: var(--color);
+    padding: 8px;
+    background-color: var(--contentBg);
+    border: 1px solid var(--border);
+    min-width: 0;
+    font-size: 1em;
+    -webkit-box-flex: 1;
+    flex: 1 0;
+}
+
+#popup-box #input-read-box {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+    margin-top: 12px;
+    color: var(--color);
+}
+
+#popup-box #input-favorite-box {
+    grid-row: 5;
+    grid-column: 1 / span 2;
+    margin-top: 12px;
+    color: var(--color);
+}
+
+#popup-box #btn-box {
+    grid-row: 6;
+    grid-column: 1 / span 2;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    margin-top: 12px;
+}
+
+#popup-box #btn-box #btn-save {
+    color: var(--saveButtonColor);
+    background-color: var(--saveButtonBg);
+    flex: 3 0;
+}
+
+#popup-box #btn-box #btn-delete {
+    color: var(--deleteButtonColor);
+    background-color: var(--deleteButtonBg);
+    flex: 2 0;
+    display: none;
+}
+
+#popup-box #btn-box a {
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    font-size: 1em;
+    -webkit-box-flex: 1;
+    flex: 1 0;
+    text-align: center;
+}

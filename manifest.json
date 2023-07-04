@@ -10,7 +10,8 @@
     },
     "permissions": [
         "<all_urls>",
-        "storage"
+        "storage",
+        "tabs"
     ],
     "background": {
         "scripts": [
@@ -21,9 +22,6 @@
         {
             "matches": [
                 "<all_urls>"
-            ],
-            "css": [
-                "css/content.css"
             ],
             "js": [
                 "js/content.js"

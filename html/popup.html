@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nurli Web Addon</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/popup.css">
+</head>
+
+<body>
+    <div id="popup-box">
+        <div id="logo">
+            <img src="../icons/icon-48.png">
+        </div>
+        <p id="app-name">Nurli</p>
+        <div id="menu-box">
+            <a id="link-app" href="#">Open app</a>
+        </div>
+        <div id="input-tags-box">
+            <input id="input-tags" type="text" placeholder="Add tags (comma-separated)" tabindex="1" autofocus>
+        </div>
+        <div id="input-read-box">
+            <input type="checkbox" id="input-read" tabindex="2">
+            <label for="input-read">Read</label>
+        </div>
+        <div id="input-favorite-box">
+            <input type="checkbox" id="input-favorite" tabindex="3">
+            <label for="input-favorite">Favorite</label>
+        </div>
+        <div id="btn-box">
+            <a id="btn-save" title="Save" tabindex="4">Save</a>
+            <a id="btn-delete" href="#" tabindex="5">Delete</a>
+        </div>
+    </div>
+
+    <script type="application/javascript" src="../js/popup.js"></script>
+</body>
+
+</html>
